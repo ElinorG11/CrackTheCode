@@ -2,9 +2,9 @@
  * Is Unique: Implement an algorithm to determine if a string has all unique characters. What if you
 cannot use additional data structures?
 Time complexity assumed: O(|S|)
-Space complexity assumed: O(|S|)
+Space complexity assumed: O(1)
 Cannot modify input, Cannot use additional DS
-Characters from abc, input is valid (no need for extra checks), UNIX coding assumed
+Characters from abc, input is valid (no need for extra checks), ASCII string assumed
 
 Examples:
 1. abcd

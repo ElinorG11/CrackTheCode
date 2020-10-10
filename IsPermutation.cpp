@@ -21,15 +21,17 @@ other.
 
 using namespace std;
 
+constexpr int NUM_LETTERS = 26;
+
 bool compareHist(int *a1, int *a2){
-    for(int i = 0; i < 26; i++){
+    for(int i = 0; i < NUM_LETTERS; i++){
         if(a1[i] != a2[i]) return false;
     }
     return true;
 }
 
 void initHist(int *hist){
-    for(int i = 0; i < 26; i++){
+    for(int i = 0; i < NUM_LETTERS; i++){
         hist[i] = 0;
     }
 }
@@ -38,8 +40,8 @@ bool checkPerm(string str1, string str2){
     string::iterator it1, it2;
     it1 = str1.begin();
     it2 = str2.begin();
-    int hist1[26];
-    int hist2[26];
+    int hist1[NUM_LETTERS];
+    int hist2[NUM_LETTERS];
     initHist(hist1);
     initHist(hist2);
     while(it1 != str1.end() && it2 != str2.end()){
@@ -55,12 +57,12 @@ bool checkPerm(string str1, string str2){
 }
 
 int main(){
-    std::string str1, str2;
-    std::cin >> str1;
-    std::cin >> str2;
+    string str1, str2;
+    cin >> str1;
+    cin >> str2;
     if(checkPerm(str1, str2)){
-        std::cout << "Is Permutation!" << std::endl;
+        cout << "Is Permutation!" << endl;
     }
-    else std::cout << "Not a Permutation..." << std::endl;
+    else cout << "Not a Permutation..." << endl;
     return 0;
 }
